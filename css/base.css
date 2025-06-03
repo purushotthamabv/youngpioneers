@@ -618,7 +618,7 @@ img {
     color: var(--color-pink);
 }
 
-.purple-color {
+.purple-color , .launchpad-menu a {
     color:var(--color-blue);
 }
 
