@@ -49,8 +49,8 @@
 }
 
 .tab-image-block img {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
 }
 
 .skill-set .tab-header-description {
@@ -134,6 +134,13 @@
 
 .founder-content {
     border: 3px solid var(--color-pink);
+}
+
+.orange-border {
+    border: 3px solid var(--color-orange);
+}
+.blue-border {
+    border: 3px solid var(--color-blue);
 }
 
 .jury-section .founder-content {
@@ -266,6 +273,14 @@
   padding: 40px;
 }
 
+.banner-background {
+    background-image: url(../images/yp-launchpad-banner.png);
+}
+
+.founder-designation {
+    min-height: 40px;
+}
+
 /* .web-menu {
   display: flex;
   justify-content: space-between;
@@ -372,4 +387,86 @@
 
 .about-content-block {
     min-height: 250px;
+}
+
+#header.scrolled .logo {
+    width: 30%;
+
+}
+
+#header.scrolled .yp-logo {
+    width: 13%;
+}
+h3 {
+  font-size: var(--font-size-30);
+}
+
+.tab-header-description {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.founders-section img {
+    height: 300px !important;
+}
+
+@media(max-width: 811px) {
+    .banner-background {
+        background: url('../images/responsive-banner-YP.png') no-repeat center/cover !important;
+    }
+}
+@media(max-width: 468px) {
+    .banner-background {
+        min-height: 200px !important;
+    }
+
+    .five-column-block .w-25 {
+        width: 50% !important;
+        margin: 10px auto;
+    }
+
+    .metrics .tab-image-block {
+        font-size: 30px;
+    }
+
+    .section-bottom-header {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .metrics .w-25 > div {
+        padding: 10px;
+        min-height: 140px;
+        margin: 0 10px;
+    }
+    .metrics .tab-header-description {
+        font-size: 16px;
+    }
+
+    .tab-image-block img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .toggle-symbol {
+        right: 10px;
+        top: 20px;
+    }
+
+    .AccHdr {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+
+    .event-schedule .AccWrap .AccHdr.clicked .toggle-symbol {
+        margin-top: 8px;
+    }
+
+    .founders-section img {
+        height: 280px !important;
+    }
+
+    .metrics .five-column-block {
+        margin: 0;
+    }
 }

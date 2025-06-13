@@ -405,7 +405,7 @@ img {
     cursor: pointer;
     overflow: hidden;
     outline: 0;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .is-active .hamburger-menu-button {
@@ -516,7 +516,7 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
     border-left: 4px solid transparent;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .ham-menu ul li.active a,
@@ -618,8 +618,15 @@ img {
     color: var(--color-pink);
 }
 
-.purple-color , .launchpad-menu a {
+.purple-color {
     color:var(--color-blue);
+}
+
+.launchpad-menu a {
+    background: #99EFE3;
+    padding: 5px 15px;
+    border-radius: 15px;
+    /* color:var(--color-white); */
 }
 
 .white-color {
@@ -804,4 +811,8 @@ img {
         transform: translateX(15vw);
         opacity: 0;
     }
+}
+
+.popup-content {
+    overflow: hidden;
 }

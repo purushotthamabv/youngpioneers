@@ -5,9 +5,9 @@
     top: 0;
     width: 100%;
     z-index: 1;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
     z-index: 2;
 }
 
@@ -23,6 +23,9 @@
 
 .logo {
     width: 35%;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .banner-background {
@@ -33,6 +36,9 @@
 
 .banner-title {
     width: 40%;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .banner-title h1 {

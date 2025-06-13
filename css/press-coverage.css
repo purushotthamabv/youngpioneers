@@ -5,9 +5,9 @@
     top: 0;
     width: 100%;
     z-index: 1;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
     z-index: 2;
 }
 
@@ -23,10 +23,16 @@
 
 .logo {
     width: 30%;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .yp-logo {
     width: 12%;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .web-menu {
@@ -232,7 +238,6 @@ input[type="reset"] {
 
 .tab-header-description {
     padding-top: 5px;
-    font-weight: 400;
     font-weight: 700;
     position: relative;
 }
