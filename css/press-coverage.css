@@ -583,6 +583,7 @@ input[type="reset"] {
 
 .owl-theme.entrepreneurship-slider .owl-dots .owl-dot span,
 .owl-theme.testimonial-slider .owl-dots .owl-dot span,
+.owl-theme.banner-carousel .owl-dots .owl-dot span,
 .owl-theme.founders-section .owl-dots .owl-dot span , .owl-theme.news-slider .owl-dots .owl-dot span {
     width: 12px;
     height: 12px;
@@ -591,6 +592,7 @@ input[type="reset"] {
 }
 
 .owl-theme.entrepreneurship-slider .owl-dots .owl-dot.active span,
+.owl-theme.banner-carousel .owl-dots .owl-dot.active span,
 .owl-theme.founders-section .owl-dots .owl-dot.active span,
 .owl-theme.testimonial-slider .owl-dots .owl-dot.active span,
 .owl-theme.news-slider .owl-dots .owl-dot.active span {
@@ -1045,4 +1047,21 @@ input[type="reset"] {
 .tab-content-date , .news .tab-content-description{
     text-transform: lowercase;
     font-size: var(--font-size-12);
+}
+
+.banner-image-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+}
+
+.banner-image{
+    width: 75%;
+    margin: auto;
+    /* margin-top: -50px; */
+}
+
+.banner-sub-title-image, .banner-image-venue {
+    margin: 20px 0;
 }

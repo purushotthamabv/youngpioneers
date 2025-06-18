@@ -240,14 +240,12 @@
                                 </div>
                             </div>
                             <div class="w-20 text-center">
-                                <a href="https://maps.app.goo.gl/vp1ZW6PvjW5XMfmF6" target="_blank">
-                                    <div class="tab-image-block">
-                                        <img src="./images/event-4.svg" alt="event 4" width="40" height="40">
-                                    </div>
-                                    <div class="tab-header-description mt-15">
-                                       Venue -<br>Nahar International School, Powai
-                                    </div>
-                                </a>
+                                <div class="tab-image-block">
+                                    <img src="./images/event-4.svg" alt="event 4" width="40" height="40">
+                                </div>
+                                <div class="tab-header-description mt-15">
+                                    Venue -<br>Nahar International School, Powai
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -721,13 +719,14 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="popup" id="popup-sheenu">
                         <div class="popup-content">
                             <span class="close-btn"></span>
                             <div class="two-col-block display-flex align-items-center">
                                 <div class="col-left w-30 col testimonial-image">
                                     <img src="./images/Sheenu-large.png" alt="Sheenu" class="show-desktop">
-                                    <img src="./images/sheenu-small.png" alt="Sheenu" class="show-mobile" style="background-color: #ff8906;">
+                                    <img src="./images/sheenu-small.png" alt="Sheenu" class="show-mobile">
                                 </div>
                                 <div class="col-right col w-70">
                                     <div class="tab-content-content-block">
@@ -893,12 +892,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="popup" id="popup-harnidh">
+                    <div class="popup" id="popup-arundhati">
                         <div class="popup-content">
                             <span class="close-btn"></span>
                             <div class="two-col-block display-flex align-items-center overflow-hidden">
                                 <div class="col-left w-30 col testimonial-image">
-                                    <img src="./images/harnidh-large.png" alt="Harnidh Kaur" class="show-desktop"
+                                    <img src="./images/arundhati-large.png" alt="Arundhati Kumar" class="show-desktop"
                                         style="background-color: #ff6daf;">
                                     <img src="./images/harnidh-small.png" alt="Harnidh Kaur" class="show-mobile"
                                         style="background-color: #ff6daf;">
@@ -918,30 +917,6 @@
                                             She is also a dynamic poet who published her first book at the age of 20,
                                             and has since built a strong online presence with over 48,000 followers on
                                             Instagram
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popup" id="popup-anoushka">
-                        <div class="popup-content">
-                            <span class="close-btn"></span>
-                            <div class="two-col-block display-flex align-items-center overflow-hidden">
-                                <div class="col-left w-30 col testimonial-image">
-                                    <img src="./images/anoushka-large.png" alt="Arundhati Kumar" class="show-desktop"
-                                        style="background-color: #ff6daf;">
-                                    <img src="./images/anoushka-small.png" alt="Harnidh Kaur" class="show-mobile"
-                                        style="background-color: #ff6daf;">
-                                </div>
-                                <div class="col-right col w-70">
-                                    <div class="tab-content-content-block">
-                                        <div class="tab-content-title">
-                                            Anoushka Jollyy
-                                        </div>
-
-                                        <div class="tab-content-description">
-                                            Anoushka Jollyy is a 15-year-old founder of the Kavach App, a mental health app designed for adolescents aged 8 to 17. A social entrepreneur since the age of 9, Anoushka is also the youngest winner on Shark Tank India, securing ₹50 lakhs in investment and is a recipient of the Pradhan Mantri Rashtriya Bal Puraskar, one of India’s highest honors for children, awarded by the Prime Minister and President of India.
                                         </div>
                                     </div>
                                 </div>

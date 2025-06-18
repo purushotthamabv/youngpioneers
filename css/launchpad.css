@@ -410,6 +410,9 @@ h3 {
     height: 300px !important;
 }
 
+.about-launchpad .tab-content-content-block {
+    padding: 30px 50px;
+}
 @media(max-width: 811px) {
     .banner-background {
         background: url('../images/responsive-banner-YP.png') no-repeat center/cover !important;

@@ -41,6 +41,10 @@
         width: 50%;
     }
 
+    .content-wrap {
+        padding-top: 90px;
+    }
+
     .banner-background {
         min-height: 390px;
         background: url('../images/mobile-banner.png') no-repeat center/cover;
@@ -64,6 +68,10 @@
     .w-40,
     .w-50 {
         width: 100%;
+    }
+
+    .launchpad .w-50 {
+        width: 60%;
     }
 
     .section-sub-header {
@@ -580,6 +588,23 @@
 
     .news-tab-image-block img {
         height: 25px;
+    }
+
+    .banner-image-right {
+        bottom: -110px;
+        width: 55%;
+    }
+
+    .launchpad .w-50.m-auto {
+        width: 65%;
+        margin-left: 5%;
+    }
+
+    .banner-image{
+        margin-top: 30px;
+    }
+    .banner-image-venue {
+        margin-top: 0;
     }
 }
 

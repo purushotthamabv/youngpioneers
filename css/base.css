@@ -193,6 +193,9 @@ strong {
     position: relative;
 }
 
+.m-auto {
+    margin: auto;
+}
 /*** Base CSS End ***/
 
 /**main css start**/

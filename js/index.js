@@ -178,6 +178,17 @@ function slider() {
             }
         }
     })
+    $('.banner-carousel').owlCarousel({
+        loop:true,
+        responsiveClass:true,
+        nav:false,
+        singleItem: true,
+        items:1,
+        autoplay:true,
+        autoplayTimeout:6000,
+        autoplayHoverPause:true,
+        animateOut: 'fadeOut'
+    })
 
     // $('.testimonial-slider').owlCarousel({
     //     loop:true,
