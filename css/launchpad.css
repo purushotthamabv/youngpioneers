@@ -87,27 +87,23 @@
     font-size: 20px;
 }
 
-.owl-theme.single-block-banner .owl-dots .owl-dot span,
-.owl-theme.testimonial-slider .owl-dots .owl-dot span,
-.owl-theme.founders-section .owl-dots .owl-dot span , .owl-theme.news-slider .owl-dots .owl-dot span {
+.speakers-container.owl-theme .owl-dots .owl-dot span {
     width: 12px;
     height: 12px;
     background: transparent;
     border: 2px solid var(--color-green);
 }
 
-.owl-theme.single-block-banner .owl-dots .owl-dot.active span,
-.owl-theme.founders-section .owl-dots .owl-dot.active span,
-.owl-theme.testimonial-slider .owl-dots .owl-dot.active span,
-.owl-theme.news-slider .owl-dots .owl-dot.active span {
+.speakers-container.owl-theme .owl-dots .owl-dot.active span {
     background: var(--color-green);
 }
 
+
 .single-block-banner .owl-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* .AccWrap:first-child .AccCont {
@@ -406,7 +402,7 @@ h3 {
     font-size: 20px;
 }
 
-.founders-section img {
+.speakers-container img {
     height: 300px !important;
 }
 
@@ -465,7 +461,7 @@ h3 {
         margin-top: 8px;
     }
 
-    .founders-section img {
+    .speakers-container img {
         height: 280px !important;
     }
 

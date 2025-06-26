@@ -532,7 +532,7 @@ img {
 /* Hamburger END */
 .web-menu li.slide-mnu {
     display: inline;
-    padding: 5px 30px;
+    padding: 5px 15px;
     margin: 5px 0;
     font-weight: 600;
     text-transform: lowercase;
