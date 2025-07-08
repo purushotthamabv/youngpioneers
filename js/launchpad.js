@@ -99,6 +99,49 @@ function accordion() {
 function renderSpeakersSection() {
     const speakersData = [
         {
+            id: "popup-harsh",
+            name: "Harsh Songra",
+            imageSmall: "./images/harsh-small.png",
+            imageLarge: "./images/harsh-large.png",
+            bgColor: "#804dd4",
+            title: "Harsh Songra",
+            designation: "CEO & Founder at MyChild App | Head of Technology at Qyuki Digital Media",
+            description: `Harsh Songra is the Founder CEO of MyChild App and We, Included, platforms
+                focused on early childhood screening and disability inclusion. A Forbes 30
+                Under 30 honoree (India & Asia), Harsh is also a TEDx speaker and disability
+                activist.
+                <br>
+                <br>
+                Currently, he is the Head of Technology at Qyuki Digital Media, where he
+                builds ML infrastructure to enable smarter decision-making. With over 8
+                years of experience in tech and advocacy, Harsh continues to inspire change
+                through innovation and storytelling.`,
+            borderClass: "blue-border"
+        },
+        {
+            id: "popup-anoushka",
+            name: "Anoushka Jollyy",
+            imageSmall: "./images/anoushka-small.png",
+            imageLarge: "./images/anoushka-large.png",
+            bgColor: "#ff6daf",
+            title: "Anoushka Jollyy",
+            designation: "Founder, Kavach App",
+            description: `Anoushka Jollyy is a 15-year-old founder of the Kavach App, a mental health app designed for adolescents aged 8 to 17. A social entrepreneur since the age of 9, Anoushka is also the youngest winner on Shark Tank India, securing ₹50 lakhs in investment and is a recipient of the Pradhan Mantri Rashtriya Bal Puraskar, one of India’s highest honors for children, awarded by the Prime Minister and President of India.`,
+            borderClass: "pink-border"
+        },
+       
+        {
+            id: "popup-raunak",
+            name: "Raunak Gulati",
+            imageSmall: "./images/raunak-small.png",
+            imageLarge: "./images/raunak-large.png",
+            bgColor: "#ff8906",
+            title: "Raunak Gulati",
+            designation: "Founder & CEO at Horse's Mouth (acqui-hired by Yocket)",
+            description: `Raunak Ash Gulati is the Founder and CEO of Horse's Mouth. He holds a passion for product analytics and growth hacking, pioneering unconventional go-to-market strategies to capture high-CAC educational markets. Raunak led Horse's Mouth from bootstrap to a successful acqui-hire by India's leading study-abroad platform - Yocket, scaling user engagement through video calls and chat while maintaining cost-efficient customer acquisition.`,
+            borderClass: "orange-border"
+        },
+        {
             id: "popup-harnidh",
             name: "Harnidh Kaur",
             imageSmall: "./images/harnidh-small.png",
@@ -196,48 +239,6 @@ function renderSpeakersSection() {
             borderClass: "orange-border"
         },
         {
-            id: "popup-anoushka",
-            name: "Anoushka Jollyy",
-            imageSmall: "./images/anoushka-small.png",
-            imageLarge: "./images/anoushka-large.png",
-            bgColor: "#ff6daf",
-            title: "Anoushka Jollyy",
-            designation: "Founder, Kavach App",
-            description: `Anoushka Jollyy is a 15-year-old founder of the Kavach App, a mental health app designed for adolescents aged 8 to 17. A social entrepreneur since the age of 9, Anoushka is also the youngest winner on Shark Tank India, securing ₹50 lakhs in investment and is a recipient of the Pradhan Mantri Rashtriya Bal Puraskar, one of India’s highest honors for children, awarded by the Prime Minister and President of India.`,
-            borderClass: "pink-border"
-        },
-        {
-            id: "popup-harsh",
-            name: "Harsh Songra",
-            imageSmall: "./images/harsh-small.png",
-            imageLarge: "./images/harsh-large.png",
-            bgColor: "#804dd4",
-            title: "Harsh Songra",
-            designation: "CEO & Founder at MyChild App | Head of Technology at Qyuki Digital Media",
-            description: `Harsh Songra is the Founder CEO of MyChild App and We, Included, platforms
-                focused on early childhood screening and disability inclusion. A Forbes 30
-                Under 30 honoree (India & Asia), Harsh is also a TEDx speaker and disability
-                activist.
-                <br>
-                <br>
-                Currently, he is the Head of Technology at Qyuki Digital Media, where he
-                builds ML infrastructure to enable smarter decision-making. With over 8
-                years of experience in tech and advocacy, Harsh continues to inspire change
-                through innovation and storytelling.`,
-            borderClass: "blue-border"
-        },
-        {
-            id: "popup-raunak",
-            name: "Raunak Gulati",
-            imageSmall: "./images/raunak-small.png",
-            imageLarge: "./images/raunak-large.png",
-            bgColor: "#ff8906",
-            title: "Raunak Gulati",
-            designation: "Founder & CEO at Horse's Mouth (acqui-hired by Yocket)",
-            description: `Raunak Ash Gulati is the Founder and CEO of Horse's Mouth. He holds a passion for product analytics and growth hacking, pioneering unconventional go-to-market strategies to capture high-CAC educational markets. Raunak led Horse's Mouth from bootstrap to a successful acqui-hire by India's leading study-abroad platform - Yocket, scaling user engagement through video calls and chat while maintaining cost-efficient customer acquisition.`,
-            borderClass: "orange-border"
-        },
-        {
             id: "popup-arundhati",
             name: "Arundhati Kumar",
             imageSmall: "./images/arundathi-small.png",
@@ -267,6 +268,28 @@ function renderSpeakersSection() {
                 Vishal has a Bachelor’s in Material Science from the Indian Institute of
                 Technology, Varanasi (formerly Banaras Hindu University).`,
             borderClass: "blue-border"
+        },
+        {
+            id: "popup-rithu",
+            name: "Dr. Ritu Uppal",
+            imageSmall: "./images/ritu-small.png",
+            imageLarge: "./images/ritu-large.png",
+            bgColor: "#ff8906",
+            title: "Dr. Ritu Uppal",
+            designation: "Chief Academics Officer, Get Set Learn ",
+            description: `Dr. Ritu Uppal is an experienced educational technologist with a strong background in the edtech industry. Her expertise spans MOOCs, Curriculum and course design and development and the implementation in face-to-face, blended, and e-learning environments. She is skilled in instructional design across all educational levels and is adept at needs analysis, dipstick analysis, and change management in both K-12 and higher education settings.`,
+            borderClass: "blue-border"
+        },
+        {
+            id: "popup-ashish",
+            name: "Ashish Arora",
+            imageSmall: "./images/ashish-small.png",
+            imageLarge: "./images/ashish-large.png",
+            bgColor: "#ff8906",
+            title: "Ashish Arora",
+            designation: "SVP, Cambridge University Press & Assessment",
+            description: `A passionate executive in the education sector, with over 20 years of experience driving transformation at the intersection of learning and technology. With a strong track record in building and scaling educational products and businesses, building partnerships, and leading high-performance teams, Ashish has led large-scale initiatives that enhance user engagement, institutional growth, and digital transformation, ensuring learning is accessible, impactful, and future-ready.`,
+            borderClass: "orange-border"
         },
     ];
 

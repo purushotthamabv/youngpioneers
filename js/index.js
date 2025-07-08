@@ -4,21 +4,21 @@ function menuClick() {
     var menuItems = $(".menu li a");
     var nav = $("#ham-navigation");
 
-    button.on("click", function() {
+    button.on("click", function () {
         span.toggleClass("hamburger-menu-button-close");
         nav.toggleClass("on");
     });
 
-    menuItems.on("click", function() {
+    menuItems.on("click", function () {
         if (nav.hasClass("on")) {
             button.click();
         }
     });
 
-    $(document).on('click', '.menu > li > a', function(e) {
+    $(document).on('click', '.menu > li > a', function (e) {
         var mainindex = $(this).attr('data-index');
         if (mainindex !== undefined) {
-            e.preventDefault(); 
+            e.preventDefault();
             scrollpage(mainindex);
             return;
         }
@@ -63,8 +63,8 @@ function menuClick() {
 
 function scrollpage(index) {
     $('html, body').stop();
-    $('html, body').animate({ 
-        scrollTop: $('.section').eq(index).offset().top - 180 
+    $('html, body').animate({
+        scrollTop: $('.section').eq(index).offset().top - 180
     }, 1000, function () {
         setTimeout(function () {
             triggerWp = 0;
@@ -92,18 +92,18 @@ function scrolling() {
 function wayPoint() {
     var sections = $('.section');
     var menuItems = $('.menu li');
-   
-    sections.each(function(index) {
+
+    sections.each(function (index) {
         var section = $(this);
-        
-        section.waypoint(function(direction) {
+
+        section.waypoint(function (direction) {
             if (direction === 'down') {
                 menuItems.removeClass('active');
                 $('.menu li a[data-index="' + index + '"]').parent().addClass('active');
             }
         }, { offset: '50%' });
 
-        section.waypoint(function(direction) {
+        section.waypoint(function (direction) {
             if (direction === 'up') {
                 menuItems.removeClass('active');
                 $('.menu li a[data-index="' + index + '"]').parent().addClass('active');
@@ -125,30 +125,175 @@ function tabFunction() {
     });
 }
 
+const videoList = [
+    {
+        type: "mp4",
+        title: "GSL Young Pioneers Launchpad 2025",
+        fileName: "GSL_Young_Pioneers_Launchpad_2025",
+        thumbnail: "../images/yp-revolution-1.png"
+    },
+    {
+        type: "mp4",
+        title: "Dr. Rahul Sharma – Laxmi School Testimonial",
+        fileName: "Dr_Rahul_Sharma_Testimonial_Laxmi_School_Video",
+        thumbnail: "../images/yp-revolution-2.jpg"
+    },
+    {
+        type: "mp4",
+        title: "Principal – Bharti Public School Testimonial",
+        fileName: "Principal_Testimonial_Bharti_Public_School",
+        thumbnail: "../images/yp-revolution-3.jpg"
+    },
+    {
+        type: "mp4",
+        title: "Bharti Public School Testimonial 1",
+        fileName: "Testimonial_Bharti_Public_School_Video_1",
+        thumbnail: "../images/yp-revolution-1.png"
+    },
+    {
+        type: "mp4",
+        title: "Bharti Public School Testimonial 2",
+        fileName: "Testimonial_Bharti_Public_School_Video_2",
+        thumbnail: "../images/yp-revolution-2.jpg"
+    },
+    {
+        type: "mp4",
+        title: "Laxmi School Testimonial 1",
+        fileName: "Testimonial_Laxmi_School_Video_1",
+        thumbnail: "../images/yp-revolution-3.jpg"
+    },
+    {
+        type: "mp4",
+        title: "Laxmi School Testimonial 2",
+        fileName: "Testimonial_Laxmi_School_Video_2",
+        thumbnail: "../images/yp-revolution-1.png"
+    },
+     {
+        type: "mp4",
+        title: "Testimonial Video 1",
+        fileName: "T1_2706",
+        thumbnail: "../images/yp-revolution-2.jpg"
+    },
+    {
+        type: "mp4",
+        title: "Testimonial Video 2",
+        fileName: "T2_2706",
+        thumbnail: "../images/yp-revolution-3.jpg"
+    },
+];
+
+
 var currentPlayingVideo = null;
 
 function videoPlay() {
-    jQuery(document).on('click', '.video_play', function() {
-        var videoWrap = jQuery(this).parents('.video-wrap');
-        var iframe = videoWrap.find('.video-player-frame');
-        var src = iframe.attr('src');
-        if (currentPlayingVideo && currentPlayingVideo !== iframe[0]) {
-            var currentSrc = jQuery(currentPlayingVideo).attr('src').replace('&autoplay=1', '');
-            jQuery(currentPlayingVideo).attr('src', currentSrc);
-            jQuery(currentPlayingVideo).parents('.video-wrap').find('.video_player_inner').css({"visibility": "visible"});
-        }
-        
-        // Play the new video
-        videoWrap.find('.video_player_inner').css({"visibility": "hidden"});
-        iframe.attr('src', src + "&autoplay=1");
+    jQuery(document).on("click", ".video_play", function () {
+        var videoWrap = jQuery(this).closest(".video-wrap");
+        var videoType = videoWrap.attr("data-type");
+        var player = videoWrap.find(".video-player-frame");
 
-        // Update the current playing video
-        currentPlayingVideo = iframe[0];
+        // Pause/reset currently playing video
+        if (currentPlayingVideo && currentPlayingVideo[0] !== player[0]) {
+            const previousType = currentPlayingVideo.closest(".video-wrap").attr("data-type");
+
+            if (previousType === "youtube") {
+                let oldSrc = currentPlayingVideo.attr("src").replace("&autoplay=1", "");
+                currentPlayingVideo.attr("src", oldSrc);
+            } else if (previousType === "mp4") {
+                currentPlayingVideo[0].pause();
+                currentPlayingVideo[0].currentTime = 0;
+            }
+
+            currentPlayingVideo.closest(".video-wrap").find(".video_player_inner").css("visibility", "visible");
+        }
+
+        // Play new video
+        videoWrap.find(".video_player_inner").css("visibility", "hidden");
+
+        if (videoType === "youtube") {
+            let src = player.attr("src");
+            if (!src.includes("&autoplay=1")) {
+                player.attr("src", src + "&autoplay=1");
+            }
+        } else if (videoType === "mp4") {
+            player[0].play();
+        }
+
+        currentPlayingVideo = player;
     });
 }
 
+function initVideoList() {
+    const $videoContainer = $(".video-container");
+
+    videoList.forEach((video, index) => {
+        let videoHTML = "";
+        const videoPath = `./videos/${video.fileName}.mp4`;
+        videoHTML = `<div class="video-wrap position-relative" data-type="mp4" style='padding: 0;'>
+        
+          <div class="video-player">
+            <video
+              class="video-player-frame"
+              width="100%"
+              height="315"
+              controls
+            >
+              <source src="${videoPath}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video_player_inner height-100 position-relative">
+            <div class="video_bg flex-slide home" style="background: url(${video.thumbnail}) no-repeat center center;"></div>
+            <div class="video_play">
+              <div class="video_play_bg"></div>
+            </div>
+          </div>
+        </div>
+      `;
+        $videoContainer.append(videoHTML);
+    });
+
+    if ($videoContainer.hasClass('owl-carousel')) {
+        $videoContainer.owlCarousel({
+            items: 3,
+            margin: 0,
+            loop: true,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            autoplayTimeout: 28000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            },
+            onTranslate: function () {
+                if (currentPlayingVideo) {
+                    const previousType = currentPlayingVideo.closest(".video-wrap").attr("data-type");
+                    if (previousType === "mp4") {
+                        currentPlayingVideo[0].pause();
+                        currentPlayingVideo[0].currentTime = 0;
+                    }
+
+                    currentPlayingVideo.closest(".video-wrap").find(".video_player_inner").css("visibility", "visible");
+                    currentPlayingVideo = null;
+                }
+            }
+        });
+    }
+
+    videoPlay();
+}
+
+
 function marqueeToggle() {
-    jQuery(document).on('click', '.close-marquee', function() {
+    jQuery(document).on('click', '.close-marquee', function () {
         $(this).parent('.marquee-section').fadeOut();
     });
 
@@ -161,32 +306,32 @@ function marqueeToggle() {
 
 function slider() {
     $('.entrepreneurship-slider').owlCarousel({
-        loop:true,
-        margin:10,
-        responsiveClass:true,
-        nav:false,
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: false,
         singleItem: true,
-        responsive:{
-            0:{
-                items:1,
+        responsive: {
+            0: {
+                items: 1,
             },
-            600:{
-                items:1,
+            600: {
+                items: 1,
             },
-            1000:{
-                items:3,
+            1000: {
+                items: 3,
             }
         }
     })
     $('.banner-carousel').owlCarousel({
-        loop:true,
-        responsiveClass:true,
-        nav:false,
+        loop: true,
+        responsiveClass: true,
+        nav: false,
         singleItem: true,
-        items:1,
-        autoplay:true,
-        autoplayTimeout:6000,
-        autoplayHoverPause:true,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: true,
         animateOut: 'fadeOut'
     })
 
@@ -220,59 +365,60 @@ function slider() {
     // });
 
     $('.founders-section').owlCarousel({
-        loop:false,
-        margin:40,
-        nav:true,
-        items:3,
-        autoplay:true,
-        autoplayTimeout:10000,
-        autoplayHoverPause:true,
-        navText: ["<span class='left-arrow'>","<span class='right-arrow'>"],
-        dots:true,
-        nav:false,
-        responsive:{
+        loop: false,
+        margin: 40,
+        nav: true,
+        items: 3,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        navText: ["<span class='left-arrow'>", "<span class='right-arrow'>"],
+        dots: true,
+        nav: false,
+        responsive: {
             0: {
                 items: 1,
-              },
-              600: {
+            },
+            600: {
                 items: 2
-              },
-              1000: {
+            },
+            1000: {
                 items: 3
-              }
+            }
         }
     })
 
     $('.single-block-banner').owlCarousel({
-        loop:false,
-        margin:40,
-        nav:true,
-        items:1,
-        autoplay:true,
-        autoplayTimeout:10000,
-        autoplayHoverPause:true,
-        navText: ["<span class='left-arrow'>","<span class='right-arrow'>"],
-        dots:true,
-        nav:false,
+        loop: false,
+        margin: 40,
+        nav: true,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        navText: ["<span class='left-arrow'>", "<span class='right-arrow'>"],
+        dots: true,
+        nav: false,
     })
+
     $('.news-slider').owlCarousel({
-        loop:true,
-        margin:40,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        dots:true,
-        nav:false,
-        responsive:{
+        loop: true,
+        margin: 40,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        dots: true,
+        nav: false,
+        responsive: {
             0: {
                 items: 1,
-              },
-              600: {
+            },
+            600: {
                 items: 3
-              },
-              1000: {
+            },
+            1000: {
                 items: 4
-              }
+            }
         }
     })
 }
@@ -281,7 +427,7 @@ function setEqualHeight() {
     var windowWidth = $(window).width();
     if (windowWidth >= 810) {
         var maxHeight = 0;
-        $('.testimonial-slider .two-col-block .col').each(function() {
+        $('.testimonial-slider .two-col-block .col').each(function () {
             var colHeight = $(this).outerHeight();
             if (colHeight > maxHeight) {
                 maxHeight = colHeight;
@@ -289,30 +435,30 @@ function setEqualHeight() {
         });
         $('.testimonial-slider .two-col-block .col').css('height', maxHeight);
     } else {
-        $('.testimonial-slider .two-col-block .col').css('height', 'auto'); // Reset height
+        $('.testimonial-slider .two-col-block .col').css('height', 'auto');
     }
 }
 
 function popUp() {
-    $('.learn-more').click(function() {
+    $('.learn-more').click(function () {
         var popupId = $(this).data('popup');
         $('#' + popupId).fadeIn();
     });
-  
+
     $('.close-btn').click(function () {
         $(this).closest('.popup').fadeOut();
     });
-  
-    $(window).click(function(event) {
+
+    $(window).click(function (event) {
         if ($(event.target).hasClass('popup')) {
-          $(event.target).fadeOut();
+            $(event.target).fadeOut();
         }
     });
 
-    $(".toggleButton").click(function() {
+    $(".toggleButton").click(function () {
         $('.plus-icon').toggleClass('rorate')
         $("#toggleContent").slideToggle("slow");
-      });
+    });
 }
 
 function hideLoader() {
@@ -332,8 +478,9 @@ $(document).ready(function () {
     marqueeToggle();
     popUp();
     hideLoader();
+    initVideoList();
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
     setEqualHeight();
 });

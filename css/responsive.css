@@ -2,9 +2,11 @@
     .footer-block-inner .col.w-50:first-child {
         width: 45%;
     }
+
     .footer-block-inner .col.w-50:last-child {
         width: 55%;
     }
+
     .single-founder-block {
         padding: 0 5px;
     }
@@ -15,6 +17,7 @@
     #header .justify-content-space-between {
         justify-content: start;
     }
+
     .yp-logo {
         width: 20%;
     }
@@ -231,6 +234,7 @@
     .about-us-image-content-block {
         margin: 30px 0;
     }
+
     .about-us .col:last-child .about-us-image-content-block {
         margin-left: 0;
     }
@@ -247,6 +251,7 @@
     .footer-block-inner .col.w-50:first-child {
         width: 50%;
     }
+
     .footer-block-inner .col.w-50:last-child {
         width: 50%;
     }
@@ -300,6 +305,11 @@
     .in-the-news .timeline-block {
         padding: 20px;
     }
+
+    .streaming-button {
+
+        margin-right: 0px !important;
+    }
 }
 
 @media(max-width: 468px) {
@@ -310,7 +320,7 @@
     .show-desktop {
         display: none;
     }
-    
+
     .show-mobile {
         display: block;
     }
@@ -508,6 +518,7 @@
     .footer-block-inner .col.w-50:first-child {
         width: 100%;
     }
+
     .footer-block-inner .col.w-50:last-child {
         width: 100%;
     }
@@ -549,7 +560,8 @@
         border-top-left-radius: 65px;
     }
 
-    .w-30 , .w-70 {
+    .w-30,
+    .w-70 {
         width: 100%;
     }
 
@@ -566,7 +578,7 @@
     }
 
     .popup .tab-content-title {
-       font-size: var(--font-size-20);
+        font-size: var(--font-size-20);
     }
 
     .owl-item .founder-content {
@@ -580,7 +592,7 @@
 
     .testimonial-slider-block .five-column-block .founder-title {
         font-size: var(--font-size-16);
-    } 
+    }
 
     .agree-checkbox {
         width: 95%;
@@ -600,9 +612,10 @@
         margin-left: 5%;
     }
 
-    .banner-image{
+    .banner-image {
         margin-top: 30px;
     }
+
     .banner-image-venue {
         margin-top: 0;
     }

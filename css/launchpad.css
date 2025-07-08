@@ -87,14 +87,14 @@
     font-size: 20px;
 }
 
-.speakers-container.owl-theme .owl-dots .owl-dot span {
+.speakers-container.owl-theme .owl-dots .owl-dot span ,  .video-container.owl-theme .owl-dots .owl-dot span{
     width: 12px;
     height: 12px;
     background: transparent;
     border: 2px solid var(--color-green);
 }
 
-.speakers-container.owl-theme .owl-dots .owl-dot.active span {
+.speakers-container.owl-theme .owl-dots .owl-dot.active span , .video-container.owl-theme .owl-dots .owl-dot.active span {
     background: var(--color-green);
 }
 
@@ -299,25 +299,26 @@
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
     filter: grayscale(100%);
-    height: 100%;
+    border-radius: 0;
+    /* height: 100%; */
 }
 
 .home {
-	background-size: cover;
-	background-position: center center;
-	background: url(../images/yp-revolution-1.png) no-repeat center center;
+	background-size: cover !important;
+    background-position: center center !important;
 }
 
-.about {
-	background: url(../images/yp-revolution-2.jpg) no-repeat center center;
-	background-size: cover;
-	background-position: center center;	
+.video-container .owl-stage-outer {
+    border-radius: 50px 0 50px 0;
 }
 
-.work {
-	background: url(../images/yp-revolution-3.jpg) no-repeat center center;
-	background-size: cover;
-	background-position: center center;
+.video-container .owl-stage-outer .video-player .video-player-frame {
+    border-radius: 0;
+}
+
+.video-container .owl-stage-outer .video-player {
+    width: 100%;
+    height: 100%;
 }
 
 .flex-container {
@@ -329,41 +330,16 @@
 }
 
 .flex-content-block {
-	color: #ffffff;
 	position: absolute;
     padding: 20px 30px;
-    bottom: 0;
-    left: 0;
-    line-height: 1.3;
-    text-align: left;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    width: 100%;
-    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flex-title , .flex-about {
     z-index: 2;
     position: relative;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    border-top-right-radius: 100px;
-    opacity: 0.8;
-}
-
-.about .overlay{
-    background: #E6FBF9;
-    opacity: 1;
 }
 
 .about .flex-content-block {
@@ -374,10 +350,6 @@
 	-webkit-flex-grow: 3;
 	flex-grow: 3;
     filter: grayscale(0%);
-}
-
-.flex-slide:hover .flex-content-block {
-	opacity: 1;
 }
 /* Hover effect */
 
@@ -393,6 +365,7 @@
 #header.scrolled .yp-logo {
     width: 13%;
 }
+
 h3 {
   font-size: var(--font-size-30);
 }
@@ -409,6 +382,16 @@ h3 {
 .about-launchpad .tab-content-content-block {
     padding: 30px 50px;
 }
+
+.video-overlay {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    border-radius: 40px;
+    position: absolute;
+}
+
 @media(max-width: 811px) {
     .banner-background {
         background: url('../images/responsive-banner-YP.png') no-repeat center/cover !important;

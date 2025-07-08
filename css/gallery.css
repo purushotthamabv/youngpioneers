@@ -1,0 +1,243 @@
+.tab-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-content-1,
+.tab-content {
+    display: none;
+    padding: 0;
+}
+
+.tab-content-1.current,
+.tab-content.current {
+    display: block;
+}
+
+.tab-content-1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.package-item {
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 200px;
+    width: calc(20% - 2px);
+    text-align: center;
+    padding: 15px 15px;
+    margin: 0 15px;
+    background: var(--color-white);
+    border-radius: 15px 0 15px 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.d-1 {
+    border: 4px solid #FF7FB9;
+    color: #FF7FB9;  
+}
+
+.d-2 {
+    border: 4px solid #804DD6;
+    color: #804DD6;  
+}
+
+.d-1.active {
+    background-color: #FF7FB9;
+    color: var(--color-white);
+}
+
+.d-1:hover {
+    background-color: #FF7FB9B2;
+    color: var(--color-white);
+}
+
+.d-2.active {
+    background-color: #804DD6;
+    color: var(--color-white);
+}
+
+.d-2:hover {
+    background-color: #804DD6B2;
+    color: var(--color-white);
+}
+
+section {
+    column-width: 260px;
+    column-gap: 6px;
+    padding: 5px;
+}
+
+section img {
+    width: 100%;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    background: var(--color-black);
+    left: 0;
+    z-index: 9999;
+}
+
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    opacity: 0.5;
+    background-position: center;
+    background-size: cover;
+}
+
+.lightbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    max-height: 95vh;
+    max-width: calc(95vw - 100px);
+    transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
+    transform-style: preserve-3d;
+}
+
+[class^="arrow"] {
+    height: 100px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+[class^="arrow"]:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 15px;
+    height: 15px;
+}
+
+.arrowr {
+    right: 0;
+}
+
+.arrowr:after {
+    border-right: 1px solid var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+}
+
+.arrowl {
+    left: 0;
+}
+
+.arrowl:after {
+    border-left: 1px solid var(--color-white);
+    border-top: 1px solid var(--color-white);
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.close:after,
+.close:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 60%;
+    background: var(--color-white);
+}
+
+.close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.title {
+    font-size: 20px;
+    color: var(--color-black);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0;
+}
+
+.tab-content-block {
+    margin-top: 30px;
+}
+
+.tab-content {
+    position: relative;
+    min-height: 300px;
+}
+
+#loading-wrapper {
+    position: absolute;
+    z-index: 1;
+}
+
+#loading-content {
+    top: 140px;
+}
+
+#loading-text {
+    top: 125px;
+}
+
+@media(max-width: 768px) {
+    section {
+        column-width: 150px;
+    }
+
+    .package-item {
+        font-size: 14px;
+        padding: 20px 10px;
+        min-width: 150px;
+        padding: 10px 10px;
+        margin: 0 5px;
+    }
+}
+
+@media(max-width: 468px) {
+    section {
+        column-width: 100px;
+        column-gap: 2px;
+        padding: 2px;
+    }
+
+    section img {
+        padding: 1px 0;
+    }
+}
