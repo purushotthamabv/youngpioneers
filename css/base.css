@@ -22,6 +22,7 @@
     --font-size-28: 28px;
     --font-size-30: 34px;
     --font-size-40: 40px;
+    --font-size-50: 50px;
     --font-size-60: 60px;
 }
 
@@ -141,7 +142,6 @@ h2 {
     letter-spacing: 1px;
     margin-bottom: 0;
     font-weight: 700;
-    /* font-family: 'magisonregular'; */
 }
 
 h3 {
@@ -150,7 +150,6 @@ h3 {
     letter-spacing: 1px;
     margin-bottom: 0;
     font-weight: 700;
-    /* font-family: 'magisonregular'; */
 }
 
 h4 {
@@ -159,6 +158,10 @@ h4 {
 
 h5 {
     font-size: var(--font-size-20);
+}
+
+.font-50 {
+    font-size: var(--font-size-50);
 }
 
 a {
@@ -235,6 +238,24 @@ strong {
 .spacer {
     padding-bottom: 60px;
     width: 100%;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.px-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .spacer-small {

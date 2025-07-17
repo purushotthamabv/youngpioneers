@@ -130,116 +130,120 @@ const videoList = [
         type: "mp4",
         title: "GSL Young Pioneers Launchpad 2025",
         fileName: "GSL_Young_Pioneers_Launchpad_2025",
-        thumbnail: "../images/yp-revolution-1.png"
+        thumbnail: "./images/thumbnails/intro-video.jpg",
+        url: "https://www.youtube.com/embed/BvFBHxQTEZY?si=K5N6f8KwahEdaFyo"
     },
     {
         type: "mp4",
         title: "Dr. Rahul Sharma – Laxmi School Testimonial",
         fileName: "Dr_Rahul_Sharma_Testimonial_Laxmi_School_Video",
-        thumbnail: "../images/yp-revolution-2.jpg"
+        thumbnail: "./images/thumbnails/cambia-school.jpg",
+        url: "https://www.youtube.com/embed/KtDyZKeXkM0?si=pP2O6VDXR4iqEFEv"
     },
     {
         type: "mp4",
         title: "Principal – Bharti Public School Testimonial",
         fileName: "Principal_Testimonial_Bharti_Public_School",
-        thumbnail: "../images/yp-revolution-3.jpg"
+        thumbnail: "./images/thumbnails/bharathi-public-school.jpg",
+        url: "https://www.youtube.com/embed/ztuE0jV86to?si=H4_4fOcH21qZ4gBm"
     },
     {
         type: "mp4",
         title: "Bharti Public School Testimonial 1",
         fileName: "Testimonial_Bharti_Public_School_Video_1",
-        thumbnail: "../images/yp-revolution-1.png"
+        thumbnail: "./images/thumbnails/dav.jpg",
+        url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
     },
-    {
-        type: "mp4",
-        title: "Bharti Public School Testimonial 2",
-        fileName: "Testimonial_Bharti_Public_School_Video_2",
-        thumbnail: "../images/yp-revolution-2.jpg"
-    },
-    {
-        type: "mp4",
-        title: "Laxmi School Testimonial 1",
-        fileName: "Testimonial_Laxmi_School_Video_1",
-        thumbnail: "../images/yp-revolution-3.jpg"
-    },
-    {
-        type: "mp4",
-        title: "Laxmi School Testimonial 2",
-        fileName: "Testimonial_Laxmi_School_Video_2",
-        thumbnail: "../images/yp-revolution-1.png"
-    },
-     {
-        type: "mp4",
-        title: "Testimonial Video 1",
-        fileName: "T1_2706",
-        thumbnail: "../images/yp-revolution-2.jpg"
-    },
-    {
-        type: "mp4",
-        title: "Testimonial Video 2",
-        fileName: "T2_2706",
-        thumbnail: "../images/yp-revolution-3.jpg"
-    },
+    // {
+    //     type: "mp4",
+    //     title: "Bharti Public School Testimonial 2",
+    //     fileName: "Testimonial_Bharti_Public_School_Video_2",
+    //     thumbnail: "./images/yp-revolution-2.jpg",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "Laxmi School Testimonial 1",
+    //     fileName: "Testimonial_Laxmi_School_Video_1",
+    //     thumbnail: "./images/yp-revolution-3.jpg",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "Laxmi School Testimonial 2",
+    //     fileName: "Testimonial_Laxmi_School_Video_2",
+    //     thumbnail: "./images/yp-revolution-1.png",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
+    //  {
+    //     type: "mp4",
+    //     title: "Testimonial Video 1",
+    //     fileName: "T1_2706",
+    //     thumbnail: "./images/yp-revolution-2.jpg",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "Testimonial Video 2",
+    //     fileName: "T2_2706",
+    //     thumbnail: "./images/yp-revolution-3.jpg",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
 ];
 
-
-var currentPlayingVideo = null;
+let currentPlayingVideo = null;
 
 function videoPlay() {
-    jQuery(document).on("click", ".video_play", function () {
-        var videoWrap = jQuery(this).closest(".video-wrap");
-        var videoType = videoWrap.attr("data-type");
-        var player = videoWrap.find(".video-player-frame");
+  jQuery(document).on("click", ".video_play", function () {
+    const videoWrap = jQuery(this).closest(".video-wrap");
+    const videoType = videoWrap.attr("data-type");
+    const player = videoWrap.find(".video-player-frame");
 
-        // Pause/reset currently playing video
-        if (currentPlayingVideo && currentPlayingVideo[0] !== player[0]) {
-            const previousType = currentPlayingVideo.closest(".video-wrap").attr("data-type");
+    // Stop/reset currently playing video (anywhere on the page)
+    if (currentPlayingVideo && currentPlayingVideo[0] !== player[0]) {
+      const previousWrap = currentPlayingVideo.closest(".video-wrap");
+      const previousType = previousWrap.attr("data-type");
 
-            if (previousType === "youtube") {
-                let oldSrc = currentPlayingVideo.attr("src").replace("&autoplay=1", "");
-                currentPlayingVideo.attr("src", oldSrc);
-            } else if (previousType === "mp4") {
-                currentPlayingVideo[0].pause();
-                currentPlayingVideo[0].currentTime = 0;
-            }
+      if (previousType === "youtube") {
+        currentPlayingVideo.attr("src", "");
+      } else if (previousType === "mp4") {
+        currentPlayingVideo[0].pause();
+        currentPlayingVideo[0].currentTime = 0;
+      }
 
-            currentPlayingVideo.closest(".video-wrap").find(".video_player_inner").css("visibility", "visible");
-        }
+      previousWrap.find(".video_player_inner").css("visibility", "visible");
+    }
 
-        // Play new video
-        videoWrap.find(".video_player_inner").css("visibility", "hidden");
+    videoWrap.find(".video_player_inner").css("visibility", "hidden");
 
-        if (videoType === "youtube") {
-            let src = player.attr("src");
-            if (!src.includes("&autoplay=1")) {
-                player.attr("src", src + "&autoplay=1");
-            }
-        } else if (videoType === "mp4") {
-            player[0].play();
-        }
-
-        currentPlayingVideo = player;
-    });
+    if (videoType === "youtube") {
+      const baseSrc = player.attr("data-src");
+      player.attr("src", baseSrc + "&autoplay=1");
+    } else if (videoType === "mp4") {
+      player[0].play();
+    }
+    currentPlayingVideo = player;
+  });
 }
 
 function initVideoList() {
     const $videoContainer = $(".video-container");
 
     videoList.forEach((video, index) => {
-        let videoHTML = "";
-        const videoPath = `./videos/${video.fileName}.mp4`;
-        videoHTML = `<div class="video-wrap position-relative" data-type="mp4" style='padding: 0;'>
-        
+        const videoHTML = `
+        <div class="video-wrap position-relative" data-type="youtube" style="padding: 0;">
           <div class="video-player">
-            <video
+            <iframe
               class="video-player-frame"
               width="100%"
               height="315"
-              controls
-            >
-              <source src="${videoPath}" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              src=""
+              data-src="${video.url}"
+              title="${video.title}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="video_player_inner height-100 position-relative">
             <div class="video_bg flex-slide home" style="background: url(${video.thumbnail}) no-repeat center center;"></div>
@@ -275,13 +279,17 @@ function initVideoList() {
             },
             onTranslate: function () {
                 if (currentPlayingVideo) {
-                    const previousType = currentPlayingVideo.closest(".video-wrap").attr("data-type");
+                    const previousWrap = currentPlayingVideo.closest(".video-wrap");
+                    const previousType = previousWrap.attr("data-type");
+
                     if (previousType === "mp4") {
                         currentPlayingVideo[0].pause();
                         currentPlayingVideo[0].currentTime = 0;
+                    } else if (previousType === "youtube") {
+                        currentPlayingVideo.attr("src", ""); // clear iframe src to stop video
                     }
 
-                    currentPlayingVideo.closest(".video-wrap").find(".video_player_inner").css("visibility", "visible");
+                    previousWrap.find(".video_player_inner").css("visibility", "visible");
                     currentPlayingVideo = null;
                 }
             }

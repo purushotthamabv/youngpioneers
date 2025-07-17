@@ -1,0 +1,133 @@
+.card-wrapper {
+    position: relative;
+    width: calc(50% - 20px);
+    margin: 20px 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.card-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+.card-front {       
+    width: 100%;
+    height: 100%;
+    color: var(--color-white);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-front .school {
+    font-size: var(--font-size-16);
+    font-weight: 700;
+    padding: 4px 8px;
+    background: var(--color-white);
+    border-radius: 10px 0 10px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.card-front .project {
+    font-weight: bold;
+    font-size: var(--font-size-22);
+    width: 50%;
+}
+
+#notable-mentions .card-front .project {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hover-card-wrapper {
+    overflow: visible;
+}
+
+.hover-card:hover {
+  transform: translate(10px , -10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hover-card {
+    padding: 20px;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    transition: transform 0.3s ease;
+    z-index: 1;
+    transform: translateY(101%);
+}
+
+.card-wrapper:hover .card-back {
+    transform: translateY(0);
+}
+
+.team-members {
+    font-weight: 700;
+    margin: 6px 5px;
+    font-size: var(--font-size-20);
+    width: calc(50% - 10px);
+}
+
+.small-font {
+    margin: 2px 5px;
+    font-size: var(--font-size-18);
+}
+
+.description {
+    font-size: var(--font-size-16);
+    line-height: 1.4;
+    border-top: 1px solid var(--color-white);
+}
+
+@media(max-width: 811px) {
+    .card-wrapper {
+        width: 100%;
+    }  
+    .card-image-wrapper {
+        height: 134px;
+    }
+
+    .card-front .project {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .px-30 {
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
+    .py-30 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .border-top-right-radius-100 {
+        border-top-right-radius: 50px;
+    }
+    .border-bottom-right-radius-100 {
+        border-bottom-right-radius: 50px;
+    }
+}

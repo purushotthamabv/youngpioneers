@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Young Pioneers: Gallery</title>
+    <title>Young Pioneers: Hall of Fame</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="./images/gsl.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,18 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/press-coverage.css">
     <link rel="stylesheet" href="./css/gallery.css">
-    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/loader.css">  
+    <link rel="stylesheet" href="./css/hall-of-fame.css">  
     <link rel="stylesheet" href="./css/responsive.css">
+    <style>
+        .card-front.border-top-right-radius-100 {
+            border-top-right-radius: 95px;
+        }
+
+        .card-front.border-bottom-right-radius-100 {
+            border-bottom-right-radius: 95px;
+        }
+    </style>
 </head>
 
 <body>
@@ -70,77 +80,36 @@
             </div>
         </header>
         <div class="content-wrap" id="content-wrapper">
-            <div class="spacer-small"></div>
-            <!-- <div class="banner section">
-                <div class="container position-relative">
-                    <div class="banner-background border-bottom-right-radius-100 position-relative"></div>
-                </div>
-            </div> -->
             <div class="spacer"></div>
-            <div class="tab row">
-                <div class="container">
-                    <div class="tabs-container">
-                        <div class="tabs">
-                            <div id="learning-packages-list" class="tab-buttons bg-shadow-white">
-                                <div class="package-item active d-1">Day 1</div>
-                                <div class="package-item d-2">Day 2</div>
-                            </div>
-                        </div>
-                        <div class="tab-content-block">
-                            <div class="tab-content current">
-                                <div id="loading-wrapper" class="loading-wrapper">
-                                    <div id="loading-text">
-                                        Loading
-                                    </div>
-                                    <div id="loading-content"></div>
-                                </div>
-                                <div class="perks-description-section day-one">
-                                    <section>
-                                        
-                                    </section>
-                                    <div class="lightbox">
-                                        <div class="filter"></div>
-                                        <div class="arrowr"></div>
-                                        <div class="arrowl"></div>
-                                        <div class="close"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content-block">
-                            <div class="tab-content ">
-                                <div id="loading-wrapper" class="loading-wrapper">
-                                    <div id="loading-text">
-                                        Loading
-                                    </div>
-                                    <div id="loading-content"></div>
-                                </div>
-                                <div class="perks-description-section day-two">
-                                    <section>
-                            
-                                    </section>
-                                    <div class="lightbox">
-                                        <div class="filter"></div>
-                                        <div class="arrowr"></div>
-                                        <div class="arrowl"></div>
-                                        <div class="close"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+            <div class="container">
+                <div class="schedule-call-block display-flex border-bottom-left-radius-50 border-top-right-radius-50 align-items-center">
+                    <div class="schedule-call-text py-30">
+                        <h1 class="text-center font-50">39 teams. One platform. Endless potential.</h1>
+                        <p class="text-center">Get to know the young pioneers reimagining the future at Launchpad 2025. Explore their stories that inspire, journeys that amaze, and ideas that shape the future.</p>
                     </div>
                 </div>
+                <div class="spacer"></div>
+                <div class="section-header text-center">
+                    <h2>winners</h2>
+                </div>
+                <div class="spacer"></div>
+                <div class="display-flex justify-content-space-between" id="winners"></div>
+                <div class="spacer"></div>
+                <div class="section-header text-center">
+                    <h2>notable mentions</h2>
+                </div>
+                <div class="spacer"></div>
+                <div class="display-flex justify-content-space-between" id="notable-mentions"></div>
+                <div class="spacer"></div>
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/css3-animate-it.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/gallery.js"></script>
+    <script src="./js/hall-of-fame.js"></script>
 </body>
 
 </html>
