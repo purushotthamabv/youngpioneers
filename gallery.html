@@ -4,13 +4,13 @@
 <head>
     <title>Young Pioneers: Gallery</title>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="./images/gsl.webp">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZWV8V9NS5"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BZWV8V9NS5'); </script>
-    <link rel="preload" href="./images/desktop-banner.png" as="image">
+    <link rel="preload" href="./images/desktop-banner.webp" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet">
@@ -24,51 +24,7 @@
 
 <body>
     <div class="wrapper">
-        <header id="header" class="position-relative">
-            <div class="container position-relative display-flex justify-content-space-between align-items-center">
-                <div class="yp-logo">
-                    <a href="./">
-                        <img src="./images/young_pioneers_Logo.png" alt="LOGO">
-                    </a>
-                </div>
-                <div class="logo" id="logo">
-                    <a href="./">
-                        <img src="./images/young-pioneer-logo.png" alt="LOGO">
-                    </a>
-                </div>
-                <div class="hamburger" id="hamburger">
-                    <button id="hamburger-menu" data-toggle="ham-navigation" class="hamburger-menu-button">
-                        <span class="hamburger-menu-button-open">Menu</span>
-                    </button>
-                    <nav id="ham-navigation" class="ham-menu">
-                        <ul class="menu">
-                            <li class="slide-mnu"><a href="./launchpad.html">Launchpad</a></li>
-                            <li class="slide-mnu"><a href="./home.html#programme">Programme</a></li>
-                            <li class="slide-mnu"><a href="./home.html#schools">Schools</a></li>
-                            <li class="slide-mnu"><a href="./press-coverage.html">Press coverage</a></li>
-                            <li class="slide-mnu"><a href="./home.html#about-us">About us</a></li>
-                            <li class="slide-mnu"><a href="./gallery.html">Gallery</a></li>
-                            <li class="slide-mnu"><a href="./hall-of-fame.html">Hall of Fame</a></li>
-                        </ul>
-                        <!-- <a class="btn">Download Certificate</a> -->
-                    </nav>
-                </div>
-
-                <div class="web-menu border-bottom-right-radius-20 border-top-left-radius-20 two-pixel-border">
-
-                    <ul class="menu">
-                        <li class="slide-mnu"><a href="./launchpad.html">Launchpad</a></li>
-                        <li class="slide-mnu"><a href="./home.html#programme">Programme</a></li>
-                        <li class="slide-mnu"><a href="./home.html#schools">Schools</a></li>
-                        <li class="slide-mnu"><a href="./press-coverage.html">Press coverage</a></li>
-                        <li class="slide-mnu"><a href="./home.html#about-us">About us</a></li>
-                        <li class="slide-mnu"><a href="./gallery.html">Gallery</a></li>
-                        <li class="slide-mnu"><a href="./hall-of-fame.html">Hall of Fame</a></li>
-                    </ul>
-                    <!-- <a class="btn">Download Certificate</a> -->
-                </div>
-            </div>
-        </header>
+        <div id="header-container"></div>
         <div class="content-wrap" id="content-wrapper">
             <div class="spacer-small"></div>
             <!-- <div class="banner section">
@@ -133,6 +89,10 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="spacer"></div>
+            <div id="footer-container"></div>
+        </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>

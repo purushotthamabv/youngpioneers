@@ -48,7 +48,7 @@
 }
 
 .banner-background {
-    background: url('../images/desktop-banner.png') no-repeat center/cover;
+    background: url('../images/desktop-banner.webp') no-repeat center/cover;
     width: 100%;
     min-height: 545px;
 }
@@ -81,6 +81,12 @@
     top: auto;
     bottom: 10%;
     font-size: var(--font-size-18);
+}
+
+.yp-content {
+    bottom: 5%;
+    left: 10%;
+    width: 60%;
 }
 
 .banner-description {
@@ -217,6 +223,10 @@ input[type="reset"] {
     padding-top: 10px;
 }
 
+.new-button {
+    margin: 0 5px;
+}
+
 .section-sub-header {
     margin: 0 16%;
 }
@@ -333,7 +343,7 @@ input[type="reset"] {
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-image: url('../images/slider_video_thumb.png');
+    background-image: url('../images/slider_video_thumb.webp');
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 40px;
@@ -364,7 +374,7 @@ input[type="reset"] {
 }
 
 .video_play_bg {
-    background-image: url('../images/play-icon.png');
+    background-image: url('../images/play-icon.webp');
     width: 40px;
     height: 40px;
     position: absolute;
@@ -419,7 +429,7 @@ input[type="reset"] {
 }
 
 .masterclass-strategies-background {
-    background: url('../images/sectionbg_masterclassentre.png') no-repeat center/cover;
+    background: url('../images/sectionbg_masterclassentre.webp') no-repeat center/cover;
     width: 100%;
     min-height: 480px;
     background-size: cover;
@@ -641,7 +651,7 @@ input[type="reset"] {
 .right-arrow {
     width: 40px;
     height: 40px;
-    background-image: url(../images/left-arrow.svg);
+    background-image: url(../images/left-arrow.webp);
     display: block;
     background-repeat: no-repeat;
     background-position: center;
@@ -649,7 +659,7 @@ input[type="reset"] {
 }
 
 .right-arrow {
-    background-image: url(../images/right-arrow.svg);
+    background-image: url(../images/right-arrow.webp);
 }
 
 .testimonial-slider .owl-prev,
@@ -777,7 +787,7 @@ input[type="reset"] {
 }
 
 .fixed-email-icon {
-    background-image: url(../images/ico_email.png);
+    background-image: url(../images/ico_email.webp);
     background-position: center;
     background-repeat: no-repeat;
     width: 100px;
@@ -812,7 +822,7 @@ input[type="reset"] {
     text-align: center;
     color: #fff;
     display: none;
-    background-image: url(../images/close-icon.png);
+    background-image: url(../images/close-icon.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -912,7 +922,7 @@ input[type="reset"] {
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    background-image: url(../images/close.png);
+    background-image: url(../images/close.webp);
 }
 
 .custom-select-wrapper {
@@ -936,7 +946,7 @@ input[type="reset"] {
     display: block;
     background-repeat: no-repeat;
     /* content: '▼'; */
-    background-image: url(../images/right-arrow-black.svg);
+    background-image: url(../images/right-arrow-black.webp);
     background-position: center;
     position: absolute;
     top: 42%;
@@ -1025,6 +1035,7 @@ input[type="reset"] {
 
 .news-list .green-button a {
     font-size: var(--font-size-14);
+    padding-left: 0;
 }
 
 .news-list .tab-content-content-block {

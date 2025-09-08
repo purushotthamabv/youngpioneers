@@ -130,63 +130,63 @@ const videoList = [
         type: "mp4",
         title: "GSL Young Pioneers Launchpad 2025",
         fileName: "GSL_Young_Pioneers_Launchpad_2025",
-        thumbnail: "./images/thumbnails/intro-video.jpg",
+        thumbnail: "./images/thumbnails/intro-video.webp",
         url: "https://www.youtube.com/embed/BvFBHxQTEZY?si=K5N6f8KwahEdaFyo"
     },
     {
         type: "mp4",
         title: "Dr. Rahul Sharma – Laxmi School Testimonial",
         fileName: "Dr_Rahul_Sharma_Testimonial_Laxmi_School_Video",
-        thumbnail: "./images/thumbnails/cambia-school.jpg",
+        thumbnail: "./images/thumbnails/cambia-school.webp",
         url: "https://www.youtube.com/embed/KtDyZKeXkM0?si=pP2O6VDXR4iqEFEv"
     },
     {
         type: "mp4",
         title: "Principal – Bharti Public School Testimonial",
         fileName: "Principal_Testimonial_Bharti_Public_School",
-        thumbnail: "./images/thumbnails/bharathi-public-school.jpg",
+        thumbnail: "./images/thumbnails/bharathi-public-school.webp",
         url: "https://www.youtube.com/embed/ztuE0jV86to?si=H4_4fOcH21qZ4gBm"
     },
     {
         type: "mp4",
         title: "Bharti Public School Testimonial 1",
         fileName: "Testimonial_Bharti_Public_School_Video_1",
-        thumbnail: "./images/thumbnails/dav.jpg",
+        thumbnail: "./images/thumbnails/dav.webp",
         url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
     },
-    // {
-    //     type: "mp4",
-    //     title: "Bharti Public School Testimonial 2",
-    //     fileName: "Testimonial_Bharti_Public_School_Video_2",
-    //     thumbnail: "./images/yp-revolution-2.jpg",
-    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
-    // },
-    // {
-    //     type: "mp4",
-    //     title: "Laxmi School Testimonial 1",
-    //     fileName: "Testimonial_Laxmi_School_Video_1",
-    //     thumbnail: "./images/yp-revolution-3.jpg",
-    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
-    // },
-    // {
-    //     type: "mp4",
-    //     title: "Laxmi School Testimonial 2",
-    //     fileName: "Testimonial_Laxmi_School_Video_2",
-    //     thumbnail: "./images/yp-revolution-1.png",
-    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
-    // },
-    //  {
-    //     type: "mp4",
-    //     title: "Testimonial Video 1",
-    //     fileName: "T1_2706",
-    //     thumbnail: "./images/yp-revolution-2.jpg",
-    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
-    // },
+    {
+        type: "mp4",
+        title: "DAVPS",
+        fileName: "DAVPS",
+        thumbnail: "./images/thumbnails/avni.webp",
+        url: "https://www.youtube.com/embed/EF4vGKMsv3c?si=_KkR3ddyapFIYMk2"
+    },
+    {
+        type: "mp4",
+        title: "Laxmi School Testimonial",
+        fileName: "Testimonial_Laxmi_School_Video_1",
+        thumbnail: "./images/thumbnails/laxmi-global.webp",
+        url: "https://www.youtube.com/embed/hTITft9DBg4?si=9-1v0_3V8xHat1uZ"
+    },
+    {
+        type: "mp4",
+        title: "Laxmi School Testimonial 2",
+        fileName: "Testimonial_Laxmi_School_Video_2",
+        thumbnail: "./images/thumbnails/bharti-public-school-1.webp",
+        url: "https://www.youtube.com/embed/CbMgbt-NymY?si=ACT-eDPmFp-FOXgv"
+    },
+     {
+        type: "mp4",
+        title: "achuta",
+        fileName: "T1_2706",
+        thumbnail: "./images/thumbnails/achuta.webp",
+        url: "https://www.youtube.com/embed/jQwREhJU8_M?si=_JfMdDqTHFsp7EwT"
+    },
     // {
     //     type: "mp4",
     //     title: "Testimonial Video 2",
     //     fileName: "T2_2706",
-    //     thumbnail: "./images/yp-revolution-3.jpg",
+    //     thumbnail: "./images/yp-revolution-3.webp",
     //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
     // },
 ];
@@ -194,36 +194,36 @@ const videoList = [
 let currentPlayingVideo = null;
 
 function videoPlay() {
-  jQuery(document).on("click", ".video_play", function () {
-    const videoWrap = jQuery(this).closest(".video-wrap");
-    const videoType = videoWrap.attr("data-type");
-    const player = videoWrap.find(".video-player-frame");
+    jQuery(document).on("click", ".video_play", function () {
+        const videoWrap = jQuery(this).closest(".video-wrap");
+        const videoType = videoWrap.attr("data-type");
+        const player = videoWrap.find(".video-player-frame");
 
-    // Stop/reset currently playing video (anywhere on the page)
-    if (currentPlayingVideo && currentPlayingVideo[0] !== player[0]) {
-      const previousWrap = currentPlayingVideo.closest(".video-wrap");
-      const previousType = previousWrap.attr("data-type");
+        // Stop/reset currently playing video (anywhere on the page)
+        if (currentPlayingVideo && currentPlayingVideo[0] !== player[0]) {
+            const previousWrap = currentPlayingVideo.closest(".video-wrap");
+            const previousType = previousWrap.attr("data-type");
 
-      if (previousType === "youtube") {
-        currentPlayingVideo.attr("src", "");
-      } else if (previousType === "mp4") {
-        currentPlayingVideo[0].pause();
-        currentPlayingVideo[0].currentTime = 0;
-      }
+            if (previousType === "youtube") {
+                currentPlayingVideo.attr("src", "");
+            } else if (previousType === "mp4") {
+                currentPlayingVideo[0].pause();
+                currentPlayingVideo[0].currentTime = 0;
+            }
 
-      previousWrap.find(".video_player_inner").css("visibility", "visible");
-    }
+            previousWrap.find(".video_player_inner").css("visibility", "visible");
+        }
 
-    videoWrap.find(".video_player_inner").css("visibility", "hidden");
+        videoWrap.find(".video_player_inner").css("visibility", "hidden");
 
-    if (videoType === "youtube") {
-      const baseSrc = player.attr("data-src");
-      player.attr("src", baseSrc + "&autoplay=1");
-    } else if (videoType === "mp4") {
-      player[0].play();
-    }
-    currentPlayingVideo = player;
-  });
+        if (videoType === "youtube") {
+            const baseSrc = player.attr("data-src");
+            player.attr("src", baseSrc + "&autoplay=1");
+        } else if (videoType === "mp4") {
+            player[0].play();
+        }
+        currentPlayingVideo = player;
+    });
 }
 
 function initVideoList() {
@@ -298,7 +298,6 @@ function initVideoList() {
 
     videoPlay();
 }
-
 
 function marqueeToggle() {
     jQuery(document).on('click', '.close-marquee', function () {
@@ -475,8 +474,127 @@ function hideLoader() {
     }, 6000);
 }
 
+const pressData = [
+    {
+        image: "./images/press_page/telegraph.webp",
+        alt: "Telegraph",
+        title: "Stress on shift to entrepreneurial mindset to spur job growth in future",
+        date: "04 Feb 2025",
+        link: "https://www.telegraphindia.com/west-bengal/kolkata/stress-on-shift-to-entrepreneurial-mindset-to-spur-job-growth-in-future/cid/2072749"
+    },
+    {
+        image: "./images/press_page/nh.webp",
+        alt: "National Herald",
+        title: "Future-Ready India: Get Set Learn’s Young Pioneers Launchpad Inspires K-12 Students to Think Beyond Textbooks",
+        date: "11 Jul 2025",
+        link: "https://nationalheraldnews.com/future-ready-india-get-set-learns-young-pioneers-launchpad-inspires-k-12-students-to-think-beyond-textbooks/"
+    },
+    {
+        image: "./images/press_page/India_today.webp",
+        alt: "India Today",
+        title: "Cambridge collabs with learning startup to host innovation summit for 150 students",
+        date: "08 Jul 2025",
+        link: "https://bestcolleges.indiatoday.in/news-detail/cambridge-collabs-with-learning-startup-to-host-innovation-summit-for-150-students-4387"
+    },
+    {
+        image: "./images/press_page/toi.webp",
+        alt: "TOI",
+        title: "Bridging the skill gap: Cambridge's integrated learning program addresses evolving educational needs, preparing Indian students for future",
+        date: "31 Dec 2024",
+        link: "https://timesofindia.indiatimes.com/education/news/bridging-the-skill-gap-cambridges-integrated-learning-program-addresses-evolving-educational-needs-preparing-indian-students-for-future-workforce/articleshow/116836986.cms"
+    },
+    {
+        image: "./images/press_page/education-21.webp",
+        alt: "Education 21",
+        title: "Cambridge’s Integrated Learning and Assessment (ILA) programme to begin with 2025 school curriculum",
+        date: "17 Dec 2024",
+        link: "https://education21.in/cambridges-integrated-learning-and-assessment-ila-programme-to-begin-with-2025-school-curriculum/"
+    },
+    {
+        image: "./images/press_page/cxo-logo.webp",
+        alt: "CXO",
+        title: "Beyond Algorithms: How AI Courses Shape the Entrepreneurial Mindset for Success in a Tech-Driven World",
+        date: "04 Oct 2024",
+        link: "https://cxotoday.com/interviews/beyond-algorithms-how-ai-courses-shape-the-entrepreneurial-mindset-for-success-in-a-tech-driven-world/"
+    },
+    {
+        image: "./images/press_page/fin-express.webp",
+        alt: "Fin Express",
+        title: "Transforming education: How schools can equip students with 21st-century skills for the future",
+        date: "21 Sep 2024",
+        link: "https://www.financialexpress.com/jobs-career/education-transforming-education-how-schools-can-equip-students-with-21st-century-skills-for-the-future-3617604/"
+    },
+    {
+        image: "./images/press_page/your-story.webp",
+        alt: "Your Story",
+        title: "Startup news and updates: Daily roundup (August 16, 2024)",
+        date: "16 Aug 2024",
+        link: "https://yourstory.com/2024/08/startup-news-and-updates-daily-roundup-august-16-2024"
+    },
+    {
+        image: "./images/press_page/the-hindu.webp",
+        alt: "The Hindu",
+        title: "Cambridge University Press Partners with Get Set Learn for ‘Young Pioneers’ Entrepreneurial Program",
+        date: "15 Aug 2024",
+        link: "https://www.thehindu.com/education/news-from-the-world-of-education-august-15-2024/article68527909.ece"
+    },
+    {
+        image: "./images/press_page/press_edtechreivew_online.webp",
+        alt: "edtech review",
+        title: "Cambridge University and Get Set Learn Launch Entrepreneurial Initiative",
+        date: "14 Aug 2024",
+        link: "https://www.edtechreview.in/news/cambridge-university-and-get-set-learn-launch-entrepreneurial-initiative/"
+    },
+    {
+        image: "./images/press_page/indiaeducationdiary.webp",
+        alt: "Education diary",
+        title: "Ahead of Independence Day, Cambridge University Press and Assessment and Get Set Learn announce Young Pioneers programme; aligns with..",
+        date: "14 Aug 2024",
+        link: "https://indiaeducationdiary.in/ahead-of-independence-day-cambridge-university-press-aligns-with-governments-vision-of-viksit-bharat-and-skill-india/"
+    },
+    {
+        image: "./images/press_page/business-news.webp",
+        alt: "business news",
+        title: "Cambridge University Press Partners with Get Set Learn for ‘Young Pioneers’ Entrepreneurial Program",
+        date: "13 Aug 2024",
+        link: "https://businessnewsthisweek.com/news/cambridge-university-press-partners-with-get-set-learn-for-young-pioneers-entrepreneurial-program/"
+    }
+];
+
+
+function pressCoverage() {
+    const $container = $('#press-container');
+
+    pressData.forEach(item => {
+        const block = `
+        <div class="col w-30">
+          <div class="tab-content-content-block grey-border border-top-right-radius-50 two-pixel-border">
+            <div class="news-tab-image-block">
+              <img src="${item.image}" alt="${item.alt}">
+            </div>
+            <div class="tab-content-description">
+              ${item.title}
+            </div>
+            <div class="tab-content-date">
+              ${item.date}
+            </div>
+            <div class="green-button menu">
+              <li>
+                <a target="_blank" style="width: 100%;" href="${item.link}">READ MORE</a>
+              </li>
+            </div>
+          </div>
+        </div>
+      `;
+        $container.append(block);
+    });
+}
+
 $(document).ready(function () {
-    menuClick();
+    $("#header-container").load("header.html", function () {
+      menuClick();
+    });
+    // menuClick();
     wayPoint();
     scrolling();
     tabFunction();
@@ -487,6 +605,8 @@ $(document).ready(function () {
     popUp();
     hideLoader();
     initVideoList();
+    pressCoverage();
+    $("#footer-container").load("footer.html");
 });
 
 $(window).resize(function () {

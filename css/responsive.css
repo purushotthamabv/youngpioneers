@@ -50,7 +50,7 @@
 
     .banner-background {
         min-height: 390px;
-        background: url('../images/mobile-banner.png') no-repeat center/cover;
+        background: url('../images/mobile-banner.webp') no-repeat center/cover;
         border-bottom-right-radius: 60px;
     }
 
@@ -307,8 +307,15 @@
     }
 
     .streaming-button {
-
         margin-right: 0px !important;
+    }
+    
+    .new-button {
+        margin: 5px 5px;
+    }
+
+    .new-button:first-of-type {
+        margin-top: 20px;
     }
 }
 
