@@ -126,62 +126,69 @@ function tabFunction() {
 }
 
 const videoList = [
-    {
-        type: "mp4",
-        title: "GSL Young Pioneers Launchpad 2025",
-        fileName: "GSL_Young_Pioneers_Launchpad_2025",
-        thumbnail: "./images/thumbnails/intro-video.webp",
-        url: "https://www.youtube.com/embed/BvFBHxQTEZY?si=K5N6f8KwahEdaFyo"
-    },
+    // {
+    //     type: "mp4",
+    //     title: "GSL Young Pioneers Launchpad 2025",
+    //     fileName: "GSL_Young_Pioneers_Launchpad_2025",
+    //     thumbnail: "./images/thumbnails/intro-video.webp",
+    //     url: "https://www.youtube.com/embed/BvFBHxQTEZY?si=K5N6f8KwahEdaFyo"
+    // },
     {
         type: "mp4",
         title: "Dr. Rahul Sharma – Laxmi School Testimonial",
         fileName: "Dr_Rahul_Sharma_Testimonial_Laxmi_School_Video",
-        thumbnail: "./images/thumbnails/cambia-school.webp",
-        url: "https://www.youtube.com/embed/KtDyZKeXkM0?si=pP2O6VDXR4iqEFEv"
+        thumbnail: "./images/slide-1.webp",
+        url: "https://www.youtube.com/embed/jK8Iero6UOs?si=_jEHEYFyJ8j7vSaG"
     },
     {
         type: "mp4",
         title: "Principal – Bharti Public School Testimonial",
         fileName: "Principal_Testimonial_Bharti_Public_School",
-        thumbnail: "./images/thumbnails/bharathi-public-school.webp",
-        url: "https://www.youtube.com/embed/ztuE0jV86to?si=H4_4fOcH21qZ4gBm"
+        thumbnail: "./images/slide-2.webp",
+        url: "https://www.youtube.com/embed/Z5AmwrpaUKM?si=9m4NxiFvhcwpmLrs"
     },
     {
         type: "mp4",
-        title: "Bharti Public School Testimonial 1",
-        fileName: "Testimonial_Bharti_Public_School_Video_1",
-        thumbnail: "./images/thumbnails/dav.webp",
-        url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+        title: "Principal – Bharti Public School Testimonial",
+        fileName: "Principal_Testimonial_Bharti_Public_School",
+        thumbnail: "./images/slide-3.webp",
+        url: "https://www.youtube.com/embed/ECdzMddRYVk?si=tBQ2aQVqHLdmVJJn"
     },
-    {
-        type: "mp4",
-        title: "DAVPS",
-        fileName: "DAVPS",
-        thumbnail: "./images/thumbnails/avni.webp",
-        url: "https://www.youtube.com/embed/EF4vGKMsv3c?si=_KkR3ddyapFIYMk2"
-    },
-    {
-        type: "mp4",
-        title: "Laxmi School Testimonial",
-        fileName: "Testimonial_Laxmi_School_Video_1",
-        thumbnail: "./images/thumbnails/laxmi-global.webp",
-        url: "https://www.youtube.com/embed/hTITft9DBg4?si=9-1v0_3V8xHat1uZ"
-    },
-    {
-        type: "mp4",
-        title: "Laxmi School Testimonial 2",
-        fileName: "Testimonial_Laxmi_School_Video_2",
-        thumbnail: "./images/thumbnails/bharti-public-school-1.webp",
-        url: "https://www.youtube.com/embed/CbMgbt-NymY?si=ACT-eDPmFp-FOXgv"
-    },
-     {
-        type: "mp4",
-        title: "achuta",
-        fileName: "T1_2706",
-        thumbnail: "./images/thumbnails/achuta.webp",
-        url: "https://www.youtube.com/embed/jQwREhJU8_M?si=_JfMdDqTHFsp7EwT"
-    },
+    // {
+    //     type: "mp4",
+    //     title: "Bharti Public School Testimonial 1",
+    //     fileName: "Testimonial_Bharti_Public_School_Video_1",
+    //     thumbnail: "./images/thumbnails/dav.webp",
+    //     url: "https://www.youtube.com/embed/7DIzEDbuGfo?si=9I3rrJDS34c8ow9y"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "DAVPS",
+    //     fileName: "DAVPS",
+    //     thumbnail: "./images/thumbnails/avni.webp",
+    //     url: "https://www.youtube.com/embed/EF4vGKMsv3c?si=_KkR3ddyapFIYMk2"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "Laxmi School Testimonial",
+    //     fileName: "Testimonial_Laxmi_School_Video_1",
+    //     thumbnail: "./images/thumbnails/laxmi-global.webp",
+    //     url: "https://www.youtube.com/embed/hTITft9DBg4?si=9-1v0_3V8xHat1uZ"
+    // },
+    // {
+    //     type: "mp4",
+    //     title: "Laxmi School Testimonial 2",
+    //     fileName: "Testimonial_Laxmi_School_Video_2",
+    //     thumbnail: "./images/thumbnails/bharti-public-school-1.webp",
+    //     url: "https://www.youtube.com/embed/CbMgbt-NymY?si=ACT-eDPmFp-FOXgv"
+    // },
+    //  {
+    //     type: "mp4",
+    //     title: "achuta",
+    //     fileName: "T1_2706",
+    //     thumbnail: "./images/thumbnails/achuta.webp",
+    //     url: "https://www.youtube.com/embed/jQwREhJU8_M?si=_JfMdDqTHFsp7EwT"
+    // },
     // {
     //     type: "mp4",
     //     title: "Testimonial Video 2",
@@ -231,7 +238,7 @@ function initVideoList() {
 
     videoList.forEach((video, index) => {
         const videoHTML = `
-        <div class="video-wrap position-relative" data-type="youtube" style="padding: 0;">
+        <div class="video-wrap position-relative border-top-left-radius-50 border-bottom-right-radius-50 overflow-hidden" data-type="youtube" style="padding: 0;">
           <div class="video-player">
             <iframe
               class="video-player-frame"
@@ -258,7 +265,7 @@ function initVideoList() {
 
     if ($videoContainer.hasClass('owl-carousel')) {
         $videoContainer.owlCarousel({
-            items: 3,
+            items: 1,
             margin: 0,
             loop: true,
             nav: false,
@@ -271,10 +278,10 @@ function initVideoList() {
                     items: 1
                 },
                 600: {
-                    items: 2
+                    items: 1
                 },
                 1000: {
-                    items: 3
+                    items: 1
                 }
             },
             onTranslate: function () {
@@ -561,7 +568,6 @@ const pressData = [
     }
 ];
 
-
 function pressCoverage() {
     const $container = $('#press-container');
 
@@ -590,6 +596,158 @@ function pressCoverage() {
     });
 }
 
+const foundersData = [
+    // {
+    //     name: "Bharat Singhal",
+    //     designation: "Founder, Bili Hu coffees",
+    //     imageSmall: "./images/bharat-small.webp",
+    //     linkedIn: "#", // or actual link
+    //     borderClass: "blue-border"
+    // },
+    // {
+    //     name: "Vishal Kumar",
+    //     designation: "CEO, Waste Warriors",
+    //     imageSmall: "./images/vishal-small.webp",
+    //     linkedIn: "#",
+    //     borderClass: "pink-border"
+    // },
+    // {
+    //     name: "Dr. Sheenu Jain",
+    //     designation: "Founder, Skairos & Centre Lead, LCE",
+    //     imageSmall: "./images/sheenu-small.webp",
+    //     linkedIn: "#",
+    //     borderClass: "orange-border"
+    // },
+    // {
+    //     name: "Sharat Potharaju",
+    //     designation: "Co-founder and CEO, Uniqode",
+    //     imageSmall: "./images/sharat-small.webp",
+    //     linkedIn: "#",
+    //     borderClass: "blue-border"
+    // },
+    {
+        name: "Swathy Rohit",
+        designation: "CEO & Founder, Health Basix",
+        imageSmall: "./images/swathy-small.webp",
+        linkedIn: "https://www.linkedin.com/in/swathyrohit/",
+        borderClass: "pink-border"
+    },
+    {
+        name: "Jyoti Bharadwaj",
+        designation: "Founder, TeaFit",
+        imageSmall: "./images/jyoti-small.webp",
+        linkedIn: "https://www.linkedin.com/in/bharadwajjyoti/",
+        borderClass: "orange-border"
+    },
+    {
+        name: "Vedang Patel",
+        designation: "Co-founder, The Souled Store",
+        imageSmall: "./images/vedang-small.webp",
+        linkedIn: "https://www.linkedin.com/in/vedang-patel-40aba34b/",
+        borderClass: "blue-border"
+    },
+    {
+        name: "Yashesh Mukhi",
+        designation: "Founder, Chupps ",
+        imageSmall: "./images/speaker-8.webp",
+        linkedIn: "https://www.linkedin.com/in/yashesh-mukhi-0438265/",
+        borderClass: "pink-border"
+    },
+    {
+        name: "Sanjay Arora",
+        designation: "Founder, Sheth Advertising ",
+        imageSmall: "./images/speaker-9.webp",
+        linkedIn: "https://www.linkedin.com/in/sanjaynagpur/",
+        borderClass: "orange-border"
+    },
+    {
+        name: "Priyanka Goel",
+        designation: "Co-founder & CMO, Go Grub",
+        imageSmall: "./images/speaker-10.webp",
+        linkedIn: "https://www.linkedin.com/in/priyankagoel13/",
+        borderClass: "blue-border"
+    },
+    {
+        name: "Shefali Anurag",
+        designation: "Co-founder, coto ",
+        imageSmall: "./images/speaker-11.webp",
+        linkedIn: "https://www.linkedin.com/in/shefanurag/",
+        borderClass: "pink-border"
+    },
+    {
+        name: "Jay Panchpor",
+        designation: "Founder, CrustWorthy Gourmet Breads",
+        imageSmall: "./images/speaker-12.webp",
+        linkedIn: "https://www.linkedin.com/in/jay-panchpor/",
+        borderClass: "orange-border"
+    },
+    {
+        name: "Mo Qureshi",
+        designation: "Director- Business Development - APAC, VEX Robotics ",
+        imageSmall: "./images/speaker-13.webp",
+        linkedIn: "https://www.linkedin.com/in/msaifq/",
+        borderClass: "blue-border"
+    },
+    {
+        name: "Heena Handa Jain",
+        designation: "CEO & Co-founder, Kratos ",
+        imageSmall: "./images/speaker-14.webp",
+        linkedIn: "https://www.linkedin.com/in/heenahandajain/",
+        borderClass: "orange-border"
+    },
+];
+
+function renderCardSection({ containerSelector, data }) {
+    const $container = $(containerSelector);
+
+    // ✅ FIX: destroy existing owl
+    if ($container.hasClass('owl-loaded')) {
+        $container.trigger('destroy.owl.carousel');
+        $container.removeClass('owl-loaded');
+        $container.find('.owl-stage-outer').children().unwrap();
+    }
+
+    $container.empty();
+
+    data.forEach((item) => {
+        const block = `
+        <div class="single-founder-block">
+            <div class="founder-image">
+                <img src="${item.imageSmall}" alt="${item.name}">
+            </div>
+
+            <div class="founder-content ${item.borderClass || ""}">
+                <div class="founder-title">${item.name}</div>
+                <div class="founder-designation">${item.designation}</div>
+
+                <div style="min-height:29px;">
+                    ${item.linkedIn
+                ? `<a href="${item.linkedIn}" target="_blank" class="learn-more">LEARN MORE</a>`
+                : ""
+            }
+                </div>
+            </div>
+        </div>`;
+
+        $container.append(block);
+    });
+
+    // ✅ Owl init
+    $container.owlCarousel({
+        items: 3,
+        margin: 40,
+        loop: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1024: { items: 3 }
+        }
+    });
+}
+
 $(document).ready(function () {
     $("#header-container").load("header.html", function () {
       menuClick();
@@ -606,6 +764,10 @@ $(document).ready(function () {
     hideLoader();
     initVideoList();
     pressCoverage();
+    renderCardSection({
+        containerSelector: ".founders-section",
+        data: foundersData
+    });
     $("#footer-container").load("footer.html");
 });
 

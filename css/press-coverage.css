@@ -47,10 +47,14 @@
     padding: 10px;
 }
 
+.web-menu .menu-list {
+    padding-left: 32px;
+}
+
 .banner-background {
     background: url('../images/desktop-banner.webp') no-repeat center/cover;
     width: 100%;
-    min-height: 545px;
+    min-height: 600px;
 }
 
 .banner-title {
@@ -72,14 +76,14 @@
 .banner-content-fixed-block {
     position: absolute;
     width: 50%;
-    top: 10%;
+    top: 16%;
     left: 5%;
 }
 
 .banner-content-fixed-block {
     width: 40%;
     top: auto;
-    bottom: 10%;
+    bottom: 16%;
     font-size: var(--font-size-18);
 }
 
@@ -326,8 +330,12 @@ input[type="reset"] {
 
 .video-wrap {
     height: 320px;
-    border-radius: 40px;
+    /* border-radius: 100px; */
     padding: 10px;
+}
+
+.video-container .video-wrap {
+    height: 550px;
 }
 
 .video-player {
@@ -351,11 +359,10 @@ input[type="reset"] {
 
 .video_play {
     cursor: pointer;
-    cursor: pointer;
     height: 60px;
     width: 60px;
-    background-color: #2b2b2f;
-    opacity: 0.8;
+    background-color: #212121;
+    opacity: 1;
     background-size: cover;
     position: absolute;
     top: 50%;
@@ -375,12 +382,12 @@ input[type="reset"] {
 
 .video_play_bg {
     background-image: url('../images/play-icon.webp');
-    width: 40px;
-    height: 40px;
-    position: absolute;
+    width: 60px;
+    height: 60px;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -595,7 +602,8 @@ input[type="reset"] {
 .owl-theme.entrepreneurship-slider .owl-dots .owl-dot span,
 .owl-theme.testimonial-slider .owl-dots .owl-dot span,
 .owl-theme.banner-carousel .owl-dots .owl-dot span,
-.owl-theme.founders-section .owl-dots .owl-dot span , .owl-theme.news-slider .owl-dots .owl-dot span {
+.owl-theme.founders-section .owl-dots .owl-dot span ,
+.owl-theme.founders-section .owl-dots .owl-dot span , .hear-what-people-say .owl-theme .owl-dots .owl-dot span {
     width: 12px;
     height: 12px;
     background: transparent;
@@ -606,7 +614,8 @@ input[type="reset"] {
 .owl-theme.banner-carousel .owl-dots .owl-dot.active span,
 .owl-theme.founders-section .owl-dots .owl-dot.active span,
 .owl-theme.testimonial-slider .owl-dots .owl-dot.active span,
-.owl-theme.news-slider .owl-dots .owl-dot.active span {
+.owl-theme.news-slider .owl-dots .owl-dot.active span,
+.hear-what-people-say .owl-theme .owl-dots .owl-dot.active span {
     background: var(--color-green);
 }
 
@@ -869,6 +878,7 @@ input[type="reset"] {
 }
 
 .learn-more {
+    padding-left: 0;
     display: inline-block;
     font-weight: 600;
     font-size: var(--font-size-14);

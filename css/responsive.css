@@ -308,6 +308,9 @@
 
     .streaming-button {
         margin-right: 0px !important;
+        position: relative;
+        padding: 5px 2px !important;
+        min-height: 20px;
     }
     
     .new-button {
@@ -394,7 +397,16 @@
         font-size: var(--font-size-14);
     }
 
-    .video-wrap {
+    .flex-container {
+        width: 100%;
+    }
+
+    .video_play , .video_play_bg {
+        height: 40px;
+        width: 40px;
+    }
+
+    .video-wrap , .video-container .video-wrap {
         height: 210px;
         border-radius: 20px;
     }
