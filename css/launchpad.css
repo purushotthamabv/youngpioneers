@@ -413,7 +413,12 @@ h3 {
 }
 
 .launchpad-btn .btn a {
-    color: #ffffff;
+    font-size: var(--font-size-18);
+    color: var(--color-white);
+}
+
+.launchpad-btn .btn {
+    padding: 8px 40px;
 }
 
 @media(max-width: 811px) {
@@ -425,15 +430,25 @@ h3 {
         left: 16%;
         bottom: 36px;
     }
+
+    .launchpad-btn .btn a {
+        font-size: var(--font-size-12);
+    }
+
+    .launchpad-btn .btn {
+        padding: 6px 24px;
+    }
 }
 
 @media(max-width: 468px) {
+    
     .launchpad-btn {
-        left: 22%;
-        bottom: -50px;
-        padding: 5px 5px;
-        font-size: 10px;
-        /* width: 100%; */
+        left: auto;
+        bottom: 10px;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
     }
 
     .banner-background {
